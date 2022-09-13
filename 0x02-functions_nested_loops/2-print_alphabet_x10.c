@@ -12,7 +12,7 @@ int c = 1;
 
 for (c = 1; c <= 10; c++)
 {
-for (i = 'a'; i < 'z'; i++)
+for (i = 'a'; i <= 'z'; i++)
 {
 _putchar(i);
 }
