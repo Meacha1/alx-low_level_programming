@@ -7,10 +7,7 @@
   */
 void jack_bauer(void)
 {
-int s;
-int t;
-int u;
-int v;
+int s, t, u, v;
 
 	for (s = 0; s <= 2; s++)
 	{
