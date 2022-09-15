@@ -8,31 +8,37 @@
 
 int main(void)
 {
-int i;
+int x;
 char str1[] = "Fizz";
 char str2[] = "Buzz";
 char str3[] = "FizzBuzz";
 
-for (i = 1; i <= 100; i++)
-{
-if (i % 5 == 0 && i % 3 == 0)
-{
-printf("%s", str3);
-}
-else if (i % 3 == 0)
-{
-printf("%s", str1);
-}
-else if (i % 5 == 0)
-{
-printf("%s", str2);
-}
-else
-{
-printf("%d", i);
-}
-if (i != 100)
-printf(" ");
-}
-return (0);
+	for (x = 1; x <= 100; x++)
+	{
+		if ((x % 3 == 0) && (x % 5 == 0))
+		{
+			printf("FizzBuzz");
+		}
+		else if (x % 3 == 0)
+		{
+			printf("Fizz");
+		}
+		else if (x % 5 == 0)
+		{
+			printf("Buzz");
+		}
+		else
+		{
+			printf("%d", x);
+		}
+
+		if (x != 100)
+		{
+			printf(" ");
+		}
+	}
+
+	printf("\n");
+
+	return (0);
 }
