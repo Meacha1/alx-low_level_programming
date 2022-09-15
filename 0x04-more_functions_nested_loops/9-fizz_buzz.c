@@ -1,17 +1,13 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /**
   * main - Prints a Fizz Buzz program
   *
   * Return: Always 0 (Success)
   */
-
 int main(void)
 {
-int x;
-char str1[] = "Fizz";
-char str2[] = "Buzz";
-char str3[] = "FizzBuzz";
+	int x;
 
 	for (x = 1; x <= 100; x++)
 	{
