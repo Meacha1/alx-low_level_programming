@@ -4,11 +4,16 @@
  * _strlen - check the code
  *
  * @s: string to be checked
- * Return: Always 0.
+ * Return: The length of the string.
  */
 int _strlen(char *s)
 {
-	char str[];
-	*s = _strlen(str);
-	return (0);
+	char count = 0;
+
+	for (; *s != '\0'; s++)
+	{
+		count++;
+	}
+
+	return (count);
 }
