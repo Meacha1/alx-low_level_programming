@@ -1,24 +1,32 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * rot13 - rotate characters 13 places in the alphabet
- * @s: string
- * Return: string `s` rotated
- */
-
+  * rot13 - ...
+  * @s: ...
+  *
+  * Return: ...
+  */
 char *rot13(char *s)
 {
-	int i;
-	char storeh[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-	char storel[] = "nopqrstuvwxyzabcdefghijklm";
+	int a = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	while (s[a])
 	{
-		if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
+		while ((s[a] >= 'a' && s[a] <= 'z') || (s[a] >= 'A' && s[a] <= 'Z'))
 		{
-			s[i] = (s[i] - 65 > 25) ?
-				storel[s[i] - 97] : storeh[s[i] - 65];
+			if ((s[a] > 'm' && s[a] <= 'z') || (s[a] > 'M' && s[a] <= 'Z'))
+			{
+				s[a] -= 13;
+				break;
+			}
+
+			s[a] += 13;
+			break;
 		}
+
+		a++;
 	}
+
 	return (s);
 }
