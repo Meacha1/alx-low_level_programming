@@ -21,7 +21,7 @@ for (i = 0; s1[i]; i++)
 	;
 for (j = 0; s2[j]; j++)
 	;
-p = malloc(sizeof(char) * i + sizeof(s2) * j);
+p = malloc(sizeof(char) * i + sizeof(char) * j + 1);
 if (p == NULL)
 return (NULL);
 for (i = 0; s1[i]; i++)
