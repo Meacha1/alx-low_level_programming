@@ -28,6 +28,7 @@ if (p == NULL)
 return (NULL);
 for (i = 0; s1[i]; i++)
 p[i] = s1[i];
+p[i] = '\0';
 for (j = 0; j < n; j++, i++)
 p[i] = s2[j];
 p[i] = '\0';
