@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 unsigned long mul;
 int i, j;
-	if (argc != 4)
+	if (argc != 3)
 	{ printf("Error\n");
 	exit(98); }
 	for (i = 1; i < argc; i++)
