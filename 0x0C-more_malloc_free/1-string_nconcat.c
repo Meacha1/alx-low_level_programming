@@ -17,8 +17,10 @@ char *p;
 
 if (*s1 == 0 || *s2 == 0)
 return (NULL);
-for (i = 0; s1[i]; i++);
-for (j = 0; s2[j]; j++);
+for (i = 0; s1[i]; i++)
+	;
+for (j = 0; s2[j]; j++)
+	;
 p = malloc(sizeof(char) * i + sizeof(s2) * j);
 if (p == NULL)
 return (NULL);
