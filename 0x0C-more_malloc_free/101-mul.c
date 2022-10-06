@@ -17,7 +17,7 @@ int i, j;
 	exit(98); }
 	for (i = 1; i < argc; i++)
 	{
-		if (atoi(argv[i]) * 0 != 0)
+		if (atoi(argv[i]))
 			{  printf("Error\n");
 			exit(98); }
 	}
