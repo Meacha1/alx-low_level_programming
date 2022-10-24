@@ -13,6 +13,8 @@ listint_t *nw = malloc(sizeof(listint_t));
 listint_t *ptr;
 if (nw == NULL)
 return (NULL);
+if (nw->n == NULL)
+	return (NULL);
 if ((*head) == NULL)
 {
 (*head) = nw;
