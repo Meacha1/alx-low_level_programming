@@ -13,6 +13,6 @@ size_t count = 0;
 
 for (; h != NULL; h = h->next)
 count++;
-}
+
 return (count);
 }
