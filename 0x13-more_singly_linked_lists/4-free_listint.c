@@ -10,17 +10,9 @@ listint_t *aux;
 if (head->next == NULL)
 	free(head);
 else
-for (aux = head->next; head->next != NULL; aux = aux->next)
+for (aux = head; head != NULL; head = head->next)
 {
-if (aux->next != NULL)
-{
-free(head);
-head = aux;
-}
-else
-{
-free(head);
+aux = head;
+head = head->next;
 free(aux);
-}
-}
 }
