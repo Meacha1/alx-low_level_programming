@@ -12,8 +12,14 @@ if (head->next == NULL)
 for (aux = head->next; aux != NULL; aux = aux->next)
 {
 if (aux->next == NULL)
+{
+free(head);
 free(aux);
+}
+else
+{
 free(head);
 head = aux;
+}
 }
 }
