@@ -7,12 +7,13 @@
 void free_listint(listint_t *head)
 {
 listint_t *aux;
-for (aux = head->next; aux->next != NULL; aux = aux->next)
+if (head->next == NULL)
+	free(head);
+for (aux = head->next; aux != NULL; aux = aux->next)
 {
 if (aux->next == NULL)
-free(NULL);
+free(aux);
 free(head);
 head = aux;
-
 }
 }
