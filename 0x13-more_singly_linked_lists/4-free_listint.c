@@ -12,15 +12,15 @@ if (head->next == NULL)
 else
 for (aux = head->next; head->next != NULL; aux = aux->next)
 {
-if (aux->next == NULL)
+if (aux->next != NULL)
 {
 free(head);
-free(aux);
+head = aux;
 }
 else
 {
 free(head);
-head = aux;
+free(aux);
 }
 }
 }
