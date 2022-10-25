@@ -9,6 +9,7 @@ void free_listint(listint_t *head)
 listint_t *aux;
 if (head->next == NULL)
 	free(head);
+else
 for (aux = head->next; aux != NULL; aux = aux->next)
 {
 if (aux->next == NULL)
