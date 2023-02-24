@@ -1,0 +1,25 @@
+# This is a makefile for task 3
+
+CC = gcc
+SRC = school.c main.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+CFLAGS = -Wall -Werror -Wextra -pedantic
+.PHONY: all clean oclean fclean re
+
+all : m.h $(OBJ)
+	$(CC) $(SRC) -o $(NAME)
+
+# Deletes all Emacs and Vim temporary files along with the executable
+clean :
+	$(RM) *~ $(NAME)
+
+# Deletes the object files
+oclean :
+	$(RM) $(OBJ)
+
+# Deletes the Emacs temporary files, the executable, and the object files
+fclean : clean oclean
+
+# Forces recompilation of all source files
+re : oclean all
